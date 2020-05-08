@@ -19,3 +19,12 @@ services:
       - ./docker/mysql8019/my.cnf:/etc/mysql/conf.d/my.cnf
     env_file:
       - ./base_env
+
+  mysql5648:
+    image: mysql:5.6.48
+    ports:
+      - 33062:3306
+    volumes:
+      - ./docker/mysql5648/data:/var/lib/mysql
+    env_file:
+      - ./base_env
