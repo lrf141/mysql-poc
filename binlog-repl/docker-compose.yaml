@@ -1,0 +1,13 @@
+version: '3'
+services:
+  master:
+    image: mysql:8.0.18
+    ports:
+      - 33060:33060
+    volumes:
+      - ./docker/master/data:/var/lib/mysql
+      - ./docker/master/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=sample
+
