@@ -38,3 +38,12 @@ services:
       - ./docker/mysql5648/data:/var/lib/mysql
     env_file:
       - ./base_env
+
+  mysql5719:
+    image: mysql:5.7.19
+    ports:
+      - 33063:3306
+    volumes:
+      - ./docker/mysql5719/data:/var/lib/mysql
+    env_file:
+      - ./base_env
