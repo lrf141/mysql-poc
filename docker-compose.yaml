@@ -56,3 +56,21 @@ services:
       - ./docker/mysql5726/data:/var/lib/mysql
     env_file:
       - ./base_env
+  
+  mysql8015:
+    image: mysql:8.0.15
+    ports:
+      - 33067:3306
+    volumes:
+      - ./docker/mysql8015/data:/var/lib/mysql
+    env_file:
+      - ./base_env
+
+  mysql8016:
+    image: mysql:8.0.16
+    ports:
+      - 33068:3306
+    volumes:
+      - ./docker/mysql8016/data:/var/lib/mysql
+    env_file:
+      - ./base_env
