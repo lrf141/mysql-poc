@@ -3,7 +3,7 @@ services:
   mysql8020:
     image: mysql:8.0.20
     ports:
-      - 33061:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql8020/data:/var/lib/mysql
       - ./docker/mysql8020/my.cnf:/etc/mysql/conf.d/my.cnf
@@ -13,7 +13,7 @@ services:
   mysql8019:
     image: mysql:8.0.19
     ports:
-      - 33062:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql8019/data:/var/lib/mysql
       - ./docker/mysql8019/my.cnf:/etc/mysql/conf.d/my.cnf
@@ -23,7 +23,7 @@ services:
   mysql8000:
     image: mysql:8.0.0
     ports:
-      - 33063:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql8000/data:/var/lib/mysql
       - ./docker/mysql8000/my.cnf:/etc/mysql/conf.d/my.cnf
@@ -33,7 +33,7 @@ services:
   mysql5648:
     image: mysql:5.6.48
     ports:
-      - 33064:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql5648/data:/var/lib/mysql
     env_file:
@@ -42,7 +42,7 @@ services:
   mysql5719:
     image: mysql:5.7.19
     ports:
-      - 33065:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql5719/data:/var/lib/mysql
     env_file:
@@ -51,7 +51,7 @@ services:
   mysql5726:
     image: mysql:5.7.26
     ports:
-      - 33066:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql5726/data:/var/lib/mysql
     env_file:
@@ -60,7 +60,7 @@ services:
   mysql8015:
     image: mysql:8.0.15
     ports:
-      - 33067:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql8015/data:/var/lib/mysql
     env_file:
@@ -69,8 +69,44 @@ services:
   mysql8016:
     image: mysql:8.0.16
     ports:
-      - 33068:3306
+      - 3306:3306
     volumes:
       - ./docker/mysql8016/data:/var/lib/mysql
+    env_file:
+      - ./base_env
+  mysql8021:
+    image: mysql:8.0.21
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8021/data:/var/lib/mysql
+      - ./docker/mysql8021/my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./base_env
+  mysql8022:
+    image: mysql:8.0.22
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8022/data:/var/lib/mysql
+      - ./docker/mysql8022/my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./base_env
+  mysql8023:
+    image: mysql:8.0.23
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8023/data:/var/lib/mysql
+      - ./docker/mysql8023/my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./base_env
+  mysql8018:
+    image: mysql:8.0.18
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8018/data:/var/lib/mysql
+      - ./docker/mysql8018/my.cnf:/etc/mysql/conf.d/my.cnf
     env_file:
       - ./base_env
