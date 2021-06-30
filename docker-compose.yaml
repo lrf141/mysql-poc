@@ -3,7 +3,7 @@ services:
   mysql8020:
     image: mysql:8.0.20
     ports:
-      - 3306:3306
+      - 33060:3306
     volumes:
       - ./docker/mysql8020/data:/var/lib/mysql
       - ./docker/mysql8020/my.cnf:/etc/mysql/conf.d/my.cnf
@@ -13,7 +13,7 @@ services:
   mysql8019:
     image: mysql:8.0.19
     ports:
-      - 3306:3306
+      - 33069:3306
     volumes:
       - ./docker/mysql8019/data:/var/lib/mysql
       - ./docker/mysql8019/my.cnf:/etc/mysql/conf.d/my.cnf
