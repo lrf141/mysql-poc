@@ -110,3 +110,12 @@ services:
       - ./docker/mysql8018/my.cnf:/etc/mysql/conf.d/my.cnf
     env_file:
       - ./base_env
+  mysql8025:
+    image: mysql:8.0.25
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8025/data:/var/lib/mysql
+      - ./docker/mysql8025/my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./base_env
