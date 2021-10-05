@@ -119,3 +119,7 @@ services:
       - ./docker/mysql8025/my.cnf:/etc/mysql/conf.d/my.cnf
     env_file:
       - ./base_env
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
