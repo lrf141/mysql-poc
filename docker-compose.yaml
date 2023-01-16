@@ -136,3 +136,16 @@ services:
       - SYS_PTRACE
     security_opt:
       - seccomp:unconfined
+  mysql8028:
+    image: mysql:8.0.28
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker/mysql8028/data:/var/lib/mysql
+      - ./docker/mysql8028/my.cnf:/etc/mysql/conf.d/my.cnf
+    env_file:
+      - ./base_env
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
